@@ -1,0 +1,99 @@
+commit 3c1bfbcb338f563c3817b35ab9e4235cb98bc039
+Author: Kaius Karhulahti <kaius.karhulahti@helsinki.fi>
+Date:   Wed Mar 11 19:37:14 2020 +0200
+
+    muutoksia
+
+ hakemistoja/file2             | 0
+ hakemistoja/{file1 => file22} | 0
+ hakemistoja/file3             | 2 ++
+ 3 files changed, 2 insertions(+)
+
+commit d6bafcc97ddacce05f2696387e130a82e8d7a4c8
+Author: Kaius Karhulahti <kaius.karhulahti@helsinki.fi>
+Date:   Wed Mar 11 19:34:55 2020 +0200
+
+    lisäyksiä
+
+ hakemistoja/file1 | 0
+ hakemistoja/file2 | 0
+ hakemistoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 092d4c503419f59b003661d3c7e6abc3eee86db1
+Author: Kaius Karhulahti <kaius.karhulahti@helsinki.fi>
+Date:   Wed Mar 11 19:29:06 2020 +0200
+
+    muokkauksia
+
+ eka.txt    | 2 +-
+ kolmas.txt | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 73e60cbd47c6589453250f8feabad04514796922
+Author: Kaius Karhulahti <kaius.karhulahti@helsinki.fi>
+Date:   Wed Mar 11 19:27:02 2020 +0200
+
+    uudelleen nimeäminen ja uusi tiedosto
+
+ tiedosto.txt => eka.txt |  0
+ lskjfks                 | 29 -----------------------------
+ 2 files changed, 29 deletions(-)
+
+commit 84a16c87527908bc82f4b9bb22f2d6c5ff1152af
+Author: Kaius Karhulahti <kaius.karhulahti@helsinki.fi>
+Date:   Wed Mar 11 19:25:08 2020 +0200
+
+    uus tiedosto
+
+ "eiaukeaet\303\244kakastagitk.txt" |  2 ++
+ lskjfks                            | 29 +++++++++++++++++++++++++++++
+ 2 files changed, 31 insertions(+)
+
+commit 38d76c4e7dd41d401b70135cf8d27f34fab76838
+Author: Kaius Karhulahti <kaius.karhulahti@helsinki.fi>
+Date:   Wed Mar 11 19:12:45 2020 +0200
+
+    uusi kansio ja siellä tiedosto
+
+ stuff/tiedot.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4df64919b28238b57e446efd2721974a320b1a0d
+Author: Kaius Karhulahti <kaius.karhulahti@helsinki.fi>
+Date:   Wed Mar 11 19:11:39 2020 +0200
+
+    poisto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 3285c636860a324325807f6e3a0880ec33a96ed1
+Author: Kaius Karhulahti <kaius.karhulahti@helsinki.fi>
+Date:   Wed Mar 11 19:10:48 2020 +0200
+
+    pari muokkausta ja uusi tiedosto
+
+ kolmas.txt   | 0
+ tiedosto.txt | 2 +-
+ toinen.text  | 1 +
+ 3 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 165ba83ab3cc6b128812f2813bf540ec530ee4eb
+Author: Kaius Karhulahti <kaius.karhulahti@helsinki.fi>
+Date:   Wed Mar 11 19:07:17 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit a5262dbbc2a066be5ff1ed343eb9efc8d96b1c05
+Author: Kaius Karhulahti <kaius.karhulahti@helsinki.fi>
+Date:   Wed Mar 11 19:03:37 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)

@@ -1,16 +1,16 @@
 # Vaativuusmäärittely
-
-### Sovelluksen tarkoitus
 ------
+### Sovelluksen tarkoitus
+
 Tarkoituksena on luoda kirjanpitosovellus, johon voidaan lisätä kuitit menoista ja jaotella niitä hieman kategorioihin kuten edustus, toimista ja auto. 
 Tarkoituksena on, että sovellusessa voi olla useampi käyttäjä ja he näkevät vain omat kuittinsa.
 
 ### Käyttäjät
-------
+
 Sovelluksessa on vain yhdenlaisia käyttäjiä eli normaaleita käyttäjiä.
 
 ### Perusversion toiminallisuus
-------
+
 #### Ennen kirjautumista
 
 * Käyttäjällä mahdollisuus kirjautua sisään uniikilla käyttäjätunnuksella
@@ -24,7 +24,7 @@ Sovelluksessa on vain yhdenlaisia käyttäjiä eli normaaleita käyttäjiä.
 * Käyttäjä voi kirjautua ulos järjestelmästä.
 
 ### Jatkokehitysideoita 
--------
+
 Kun perusversio on valmiina sitä voidaan täydentää mahdollisesti seuraavin ideoin.
 
 * Kuitin kategorian vaihtaminen toiseksi

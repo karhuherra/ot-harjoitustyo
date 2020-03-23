@@ -1,5 +1,5 @@
 # Vaativuusmäärittely
-======
+
 ### Sovelluksen tarkoitus
 ------
 Tarkoituksena on luoda kirjanpitosovellus, johon voidaan lisätä kuitit menoista ja jaotella niitä hieman kategorioihin kuten edustus, toimista ja auto. 

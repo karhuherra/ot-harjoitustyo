@@ -1,9 +1,12 @@
-# Tämä on mun kirjoittama
+# Ohjelmistotekniikka
 
-Tässä on **lihavoituja osuuksia** ja sitten *kursiivilla kirjoitettuja juttuja*.
+## Laskarit
+[viikko 1]()
+[viikko 2]()
 
-[komentorivi.txt](https://github.com/karhuherra/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+## Harjoitustyö - kirjanpitosovellus
+------
 
-[gitlog.txt](https://github.com/karhuherra/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-
-## Tehdään tänne muutos
+### Dokumentaatio
+[Vaativuusmäärittely](https://github.com/karhuherra/ot-harjoitustyo/blob/master/dokumentaatio/vaativuusm%C3%A4%C3%A4rittely.md)
+[Työaikakirjanpito]()

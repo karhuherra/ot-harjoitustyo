@@ -2,6 +2,9 @@
 /laskarit/viikko2/Maksukortti/target/
 /laskarit/viikko2/Unicafe/target
 /laskarit/viikko2/Unicafe/nbproject/
-/kirjanpito/target
+/kirjanpito/target/
 /kirjanpito/nbproject/
-kirjanpito/database.db
+/kirjanpito/database.db/
+*.log
+*.sql
+*.sqlite

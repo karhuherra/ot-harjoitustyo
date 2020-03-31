@@ -1,13 +1,18 @@
 # Ohjelmistotekniikka
 
-## Laskarit
-[viikko 1](https://github.com/karhuherra/ot-harjoitustyo/tree/master/laskarit/viikko1)
-
-[viikko 2](https://github.com/karhuherra/ot-harjoitustyo/tree/master/laskarit/viikko2)
-
-[viikko3](https://github.com/karhuherra/ot-harjoitustyo/tree/master/laskarit/viikko3)
 ## Harjoitustyö - kirjanpitosovellus
 ------
+Tässä sovelluksessa tarkoituksena on, että käyttäjä voi tallentaa omia kuittejaan ja tarkastella niitä erilaisin jäsentelyin.
+
+### Harjoitustyö tällä hetkellä
+Tällä hetkellä harjoitustyössä on vain tekstikäyttöjärjestelmä ja sen avulla mahdollisuus lisätä tietokantaan kuittien summia ja tarkastella niitä.
+En saanut toteutettua testejä järjestelmään, koska en keksinyt miten voin tarkastella mitä tietokannassa on. Minulla on aina yksi tietokanta ja
+sen sisältö ei saa muokkattua niin, että testeissä voisin aina toimia tyhjän tietokannan kanssa. Vai onko tämä jotenkin mahdollista?
+
+### Käynnistäminen 
+Sovelluksen käynnistäminen onnistuu komentorivillä komennolla:
+mvn exec:java -Dexec.mainClass=com.mycompany.kirjanpito.Kirjanpito 
+
 
 ### Dokumentaatio
 [Vaativuusmäärittely](https://github.com/karhuherra/ot-harjoitustyo/blob/master/dokumentaatio/vaativuusm%C3%A4%C3%A4rittely.md)

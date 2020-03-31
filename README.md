@@ -1,8 +1,9 @@
 # Ohjelmistotekniikka
 
 ## Harjoitustyö - kirjanpitosovellus
-------
 Tässä sovelluksessa tarkoituksena on, että käyttäjä voi tallentaa omia kuittejaan ja tarkastella niitä erilaisin jäsentelyin.
+
+-------
 
 ### Harjoitustyö tällä hetkellä
 Tällä hetkellä harjoitustyössä on vain tekstikäyttöjärjestelmä ja sen avulla mahdollisuus lisätä tietokantaan kuittien summia ja tarkastella niitä.

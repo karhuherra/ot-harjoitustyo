@@ -26,7 +26,7 @@ public class database {
         try{PreparedStatement statement = db.prepareStatement("INSERT INTO receipts (total) VALUES (?)");
         statement.setDouble(1, total);
         statement.executeUpdate(); 
-        System.out.println("Asiakas lisätty");
+        System.out.println("kuitti lisätty");
         }catch(SQLException e){
             System.out.println("Ei toimi, kokeile uudestaan");
         }

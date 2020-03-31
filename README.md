@@ -5,6 +5,7 @@
 
 [viikko 2](https://github.com/karhuherra/ot-harjoitustyo/tree/master/laskarit/viikko2)
 
+[viikko3](https://github.com/karhuherra/ot-harjoitustyo/tree/master/laskarit/viikko3)
 ## Harjoitustyö - kirjanpitosovellus
 ------
 

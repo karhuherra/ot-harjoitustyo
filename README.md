@@ -12,8 +12,8 @@ sen sisältö ei saa muokkattua niin, että testeissä voisin aina toimia tyhjä
 
 ### Käynnistäminen 
 Sovelluksen käynnistäminen onnistuu komentorivillä komennolla:
-mvn exec:java -Dexec.mainClass=com.mycompany.kirjanpito.Kirjanpito 
 
+mvn compile exec:java -Dexec.mainClass=com.mycompany.kirjanpito.mainClass
 
 ### Dokumentaatio
 [Vaativuusmäärittely](https://github.com/karhuherra/ot-harjoitustyo/blob/master/dokumentaatio/vaativuusm%C3%A4%C3%A4rittely.md)

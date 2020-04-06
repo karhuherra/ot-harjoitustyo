@@ -4,15 +4,17 @@
  * and open the template in the editor.
  */
 package com.mycompany.kirjanpito;
+
 import java.util.Scanner;
 import operatingsystem.textOperatingSystem;
 import kirjanpito.action.database;
 import java.sql.*;
+
 /**
  *
  * @author kaikarhu
  */
-public class Kirjanpito {
+public class mainClass {
 
     /**
      * @param args the command line arguments
@@ -24,7 +26,6 @@ public class Kirjanpito {
         database db = new database();
         textOperatingSystem top = new textOperatingSystem(s,db);
         top.start();
-        
     }
     
 }

@@ -10,6 +10,7 @@ package kirjanpito.action;
  * @author kaikarhu
  */
 import java.sql.*;
+import java.util.*;
 
 public class database {
     
@@ -45,6 +46,23 @@ public class database {
         }catch (SQLException e){
             System.out.println("Ei toimi, kokeile uudestaan");
         }
+    }
+    
+    public ArrayList<Double> listAllReceiptsGraphic() throws SQLException{
+        try{
+            PreparedStatement statement = db.prepareStatement("SELECT total FROM receipts");        
+            ResultSet result = statement.executeQuery();
+            ArrayList<Double> list = new ArrayList<>();
+            while(result.next()){
+                list.add(result.getDouble("total"));
+            }
+            return list;
+            
+        }catch (SQLException e){
+            System.out.println("Ei toimi, kokeile uudestaan");
+        }
+        ArrayList<Double> list = new ArrayList<>();
+        return list;
     }
     
 }

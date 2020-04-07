@@ -26,7 +26,7 @@ public class graphicOperatingSystem extends Application{
     
     public void start(Stage stage) throws SQLException {
         
-        database db = new database();
+        database db = new database("jdbc:sqlite:database.db");
         stage.setTitle("Kirjanpito");
        
         Label Total = new Label("Kuitin summa:  ");
@@ -39,7 +39,7 @@ public class graphicOperatingSystem extends Application{
         Button addButton = new Button("Lisää kuitti");
         addButton.setOnAction((event)  ->  {
             try{
-            db.addReceipt(Double.valueOf(TotalField.getText()));
+            db.addReceipt(Double.valueOf(TotalField.getText()), "kakka");
             }catch (SQLException e){
                 
             }

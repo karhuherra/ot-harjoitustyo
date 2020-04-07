@@ -24,7 +24,8 @@ public class textOperatingSystem {
         
         this.staments.put("666", "666 lopeta");
         this.staments.put("1", "1 lisää kuitti");
-        this.staments.put("2", "2 näytä kaikki kuiti");        
+        this.staments.put("2", "2 näytä kaikki kuiti");
+        this.staments.put("3", "3 näytä kaikki kuitit kategoriasta");
     }
     
     public void start() throws SQLException{
@@ -44,11 +45,23 @@ public class textOperatingSystem {
             if(statement.equals("1")){
                 System.out.println("Anna kuitin summa:");
                 double total = Double.valueOf(s.nextLine());
-                db.addReceipt(total);
+                System.out.println("Anna kuitin kategoria:");
+                String category = s.nextLine();
+                db.addReceipt(total, category);
             }
             
             if(statement.equals("2")){
                 db.listAllReceipts();
+            }
+            
+            if(statement.equals("3")){
+                System.out.println("Anna kategoria:");
+                String category = s.nextLine();
+                db.listAllReceiptsFrom(category);
+            }
+            
+            if(statement.equals("4")){
+                db.clean();
             }
         }
     }

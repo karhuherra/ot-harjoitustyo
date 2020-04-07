@@ -6,9 +6,8 @@ Tässä sovelluksessa tarkoituksena on, että käyttäjä voi tallentaa omia kui
 -------
 
 ### Harjoitustyö tällä hetkellä
-Tällä hetkellä harjoitustyössä on vain tekstikäyttöjärjestelmä ja sen avulla mahdollisuus lisätä tietokantaan kuittien summia ja tarkastella niitä.
-En saanut toteutettua testejä järjestelmään, koska en keksinyt miten voin tarkastella mitä tietokannassa on. Minulla on aina yksi tietokanta ja
-sen sisältö ei saa muokkattua niin, että testeissä voisin aina toimia tyhjän tietokannan kanssa. Vai onko tämä jotenkin mahdollista?
+Tekstikäyttöjärjestelmässä on enemmän toimintoja kuin graafisessa. Testien toteuttaminen vielä pielessä. Ollaankohan tässä edes vähän oikeilla jäljillä.
+
 
 ### Käynnistäminen 
 Sovelluksen käynnistäminen onnistuu komentorivillä komennolla:

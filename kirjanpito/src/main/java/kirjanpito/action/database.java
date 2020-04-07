@@ -14,18 +14,27 @@ import java.util.*;
 
 public class database {
     
-    private Connection db;
+    Connection db;
     
-    public database() throws SQLException{
-        db = DriverManager.getConnection("jdbc:sqlite:database.db");
+    public database(String text) throws SQLException{
+        db = DriverManager.getConnection(text);
         Statement s = db.createStatement();
         s.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT UNIQUE)");
-        s.execute("CREATE TABLE IF NOT EXISTS receipts (id INTEGER PRIMARY KEY, total NUMERIC)");
+        s.execute("CREATE TABLE IF NOT EXISTS receipts (id INTEGER PRIMARY KEY, total NUMERIC, category TEXT)");
+        
     }
     
-    public void addReceipt(double total) throws SQLException{
-        try{PreparedStatement statement = db.prepareStatement("INSERT INTO receipts (total) VALUES (?)");
+    public void clean() throws SQLException{
+        Statement s = db.createStatement();
+        s.execute("DROP TABLE receipts");
+        s.execute("DROP TABLE users");
+        
+    }
+    
+    public void addReceipt(double total, String category) throws SQLException{
+        try{PreparedStatement statement = db.prepareStatement("INSERT INTO receipts (total,category) VALUES (?,?)");
         statement.setDouble(1, total);
+        statement.setString(2, category);
         statement.executeUpdate(); 
         System.out.println("kuitti lisätty");
         }catch(SQLException e){
@@ -35,12 +44,12 @@ public class database {
     
     public void listAllReceipts() throws SQLException{
         try{
-            PreparedStatement statement = db.prepareStatement("SELECT total FROM receipts");        
+            PreparedStatement statement = db.prepareStatement("SELECT total,category FROM receipts");        
             ResultSet result = statement.executeQuery();
             System.out.println("Kuitit:");
             System.out.println("");
             while(result.next()){
-                System.out.println(result.getDouble("total"));
+                System.out.println(result.getDouble("total") + " " + result.getString("category"));
             }
             
         }catch (SQLException e){
@@ -64,5 +73,23 @@ public class database {
         ArrayList<Double> list = new ArrayList<>();
         return list;
     }
+    
+    public void listAllReceiptsFrom(String category) throws SQLException{
+        try{
+            PreparedStatement statement = db.prepareStatement("SELECT total,category FROM receipts WHERE category=?");
+            statement.setString(1,category);
+            ResultSet result = statement.executeQuery();
+            System.out.println("Kuitit:");
+            System.out.println("");
+            while(result.next()){
+                System.out.println(result.getDouble("total") + " " + result.getString("category"));
+            }
+            
+        }catch (SQLException e){
+            System.out.println("Ei toimi, kokeile uudestaan");
+        }
+    }
+    
+    
     
 }

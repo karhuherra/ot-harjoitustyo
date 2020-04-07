@@ -23,7 +23,7 @@ public class mainClass {
         // TODO code application logic here
         System.out.println("Haluatko tekstikäyttöliittymän vai graafisen? (saatavilla vain teksti)");
         Scanner s = new Scanner(System.in);
-        database db = new database();
+        database db = new database("jdbc:sqlite:database.db");
         textOperatingSystem top = new textOperatingSystem(s,db);
         top.start();
     }

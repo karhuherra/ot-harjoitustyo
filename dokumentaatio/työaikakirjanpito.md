@@ -1,5 +1,5 @@
 # Työaikakirjanpito
-yhteensä: 19h
+yhteensä: 30h
 ### Viikko 2, ensimmäinen viikko harjoitustyön parissa
 
 Vaativuusmäärittelyn tekeminen noin 1 h.
@@ -11,3 +11,7 @@ Sovelluksen rungon laatiminen 6h.
 ### Viikko 4, kolmas viikko harjoitustyön parissa
 
 Sovellukseen graafinen käyttöliittymä ja lisää ominaisuuksia tekstikäyttöliittymään. Myös testien tekemistä. 12h. 
+
+### Viikko 5, neljäs viikko harjoitustyön parissa
+
+Nyt tuntuu, että alkaa hieman ymmärtämään tätä 11h.

@@ -18,6 +18,7 @@ import kirjanpito.action.database;
 import java.sql.*;
 import java.util.*;
 import javafx.scene.control.*;
+import kirjanpito.action.receipt;
 /**
  *
  * @author kaikarhu
@@ -48,7 +49,7 @@ public class graphicOperatingSystem extends Application{
         Button addButton2 = new Button("Listaa kuitit");
         addButton2.setOnAction((event) -> {
             try{
-            ArrayList<Double> list = db.listAllReceiptsGraphic();
+            ArrayList<receipt> list = db.listAll();
             receipts.setText(list.toString());
                 
             }catch(SQLException e){

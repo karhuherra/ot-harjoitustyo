@@ -21,10 +21,8 @@ public class mainClass {
      */
     public static void main(String[] args) throws SQLException {
         // TODO code application logic here
-        System.out.println("Haluatko tekstikäyttöliittymän vai graafisen? (saatavilla vain teksti)");
         Scanner s = new Scanner(System.in);
-        database db = new database("jdbc:sqlite:database.db");
-        textOperatingSystem top = new textOperatingSystem(s,db);
+        textOperatingSystem top = new textOperatingSystem(s);
         top.start();
     }
     

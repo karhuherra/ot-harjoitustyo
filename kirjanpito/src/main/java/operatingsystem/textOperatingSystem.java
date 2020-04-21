@@ -7,6 +7,7 @@ package operatingsystem;
 import kirjanpito.action.database;
 import java.util.*;
 import java.sql.*;
+import kirjanpito.action.receipt;
 /**
  *
  * @author kaikarhu
@@ -17,15 +18,18 @@ public class textOperatingSystem {
     private Map<String, String> staments;
     private database db;
     
-    public textOperatingSystem(Scanner s, database db){
+    public textOperatingSystem(Scanner s) throws SQLException{
         this.s = s;
-        this.db = db;
+        this.db = new database("jdbc:sqlite:database.db");
         this.staments = new TreeMap<>();
         
         this.staments.put("666", "666 lopeta");
+        this.staments.put("999", "999 drop tables");
         this.staments.put("1", "1 lisää kuitti");
         this.staments.put("2", "2 näytä kaikki kuiti");
         this.staments.put("3", "3 näytä kaikki kuitit kategoriasta");
+        this.staments.put("4", "4 summa kaikista kuiteista");
+        this.staments.put("5", "5 summa kuiteista tietyssä kategoriassa");
     }
     
     public void start() throws SQLException{
@@ -42,6 +46,10 @@ public class textOperatingSystem {
                 break;
             }
             
+            if(statement.equals("999")){
+                db.clean();
+            }
+            
             if(statement.equals("1")){
                 System.out.println("Anna kuitin summa:");
                 double total = Double.valueOf(s.nextLine());
@@ -51,17 +59,37 @@ public class textOperatingSystem {
             }
             
             if(statement.equals("2")){
-                db.listAllReceipts();
+                ArrayList<receipt> receipts = db.listAll();
+                if(receipts.isEmpty()){
+                    System.out.println("Ei kuitteja");
+                }
+                for(receipt r : receipts){
+                    System.out.println(r);
+                }                
             }
             
             if(statement.equals("3")){
                 System.out.println("Anna kategoria:");
                 String category = s.nextLine();
-                db.listAllReceiptsFrom(category);
+                ArrayList<receipt> list = db.listAllReceiptsFrom(category);
+                
+                if(list.isEmpty()){
+                    System.out.println("Ei kuitteja");
+                }
+                
+                for(receipt r : list){
+                    System.out.println(r);
+                }
             }
             
             if(statement.equals("4")){
-                db.clean();
+                System.out.println("kuittien summa yhteensä: " + db.listAllReceiptsSum());
+            }
+            
+            if(statement.equals("5")){
+                System.out.println("Anna kategoria:");
+                String category = s.nextLine();
+                System.out.println(category + " kuittien summa yhteensä: " + db.listAllReceiptsFromSum(category));
             }
         }
     }

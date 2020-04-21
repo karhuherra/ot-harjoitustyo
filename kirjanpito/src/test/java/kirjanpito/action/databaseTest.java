@@ -5,6 +5,7 @@
  */
 package kirjanpito.action;
 
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -13,34 +14,88 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import java.sql.*;
 import java.util.*;
-import kirjanpito.action.database;
+import kirjanpito.action.receipt;
 
 /**
  *
  * @author kaikarhu
  */
 public class databaseTest {
-    database datab;
     
+    database db;
     
-    
+    public databaseTest() {
+    }
     
     
     @Before
     public void setUp() throws SQLException{
-       datab = new database("jdbc:sqlite:fakedatabase.db");
+        db = new database("jdbc:sqlite:fakedatabase.db");
     }
     
     @After
-    public void clean() throws SQLException {
-        datab.clean();
+    public void tearDown() throws SQLException {
+        db.clean();
     }
 
+    
+
+    /**
+     * Test of addReceipt method, of class database.
+     */
     @Test
-    public void databaseTest() throws SQLException {
-        PreparedStatement statement = datab.db.prepareStatement("SELECT COUNT(*) FROM sqlite_master WHERE type = 'table'");        
-        ResultSet result = statement.executeQuery();
-        assertEquals(result, 2);
+    public void testAddReceipt() throws Exception {
+        double total = 10.0;
+        String category = "office";
+        db.addReceipt(total, category);
+        List<receipt> list = db.listAll();
+        int size = list.size();
+        
+        assertEquals(1, size);
+        
+    }
+    
+    
+    @Test
+    public void testAddReceiptCategory() throws Exception {
+        db.addReceipt(12, "office");
+        db.addReceipt(3, "dog");
+        db.addReceipt(3, "office");
+        List<receipt> list = db.listAllReceiptsFrom("office");
+        int size = list.size();
+        
+        assertEquals(2, size);
+        
+    }
+    
+    @Test
+    public void testAddReceiptCategorySum() throws Exception {
+        db.addReceipt(12, "office");
+        db.addReceipt(3, "dog");
+        db.addReceipt(3, "office");
+        double num = db.listAllReceiptsFromSum("office");
+        boolean val = false;
+        if(num == 15){
+            val = true;
+        }
+        
+        assertEquals(true, val);
+        
+    }
+    
+    @Test
+    public void testAddReceiptSum() throws Exception {
+        db.addReceipt(12, "office");
+        db.addReceipt(3, "dog");
+        db.addReceipt(3, "office");
+        double n = db.listAllReceiptsSum();
+        boolean val = false;
+        if(n == 18){
+            val = true;
+        }
+        
+        assertEquals(true, val);
+        
     }
     
 }

@@ -9,4 +9,5 @@
 *.sql
 *.sqlite
 kirjanpito/database.db
-
+/kirjanpito/fakedatabase.db/
+kirjanpito/fakedatabase.db

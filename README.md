@@ -6,7 +6,7 @@ Tässä sovelluksessa tarkoituksena on, että käyttäjä voi tallentaa omia kui
 -------
 
 ### Harjoitustyö tällä hetkellä
-Tekstikäyttöjärjestelmässä on enemmän toimintoja kuin graafisessa. Testien toteuttaminen vielä pielessä. Ollaankohan tässä edes vähän oikeilla jäljillä.
+Tekstikäyttöjärjestelmässä on paljon enemmän toimintoja kuin graafisessa. Testien toteuttaminen onnistuu nyt hiukan.
 
 
 ### Käynnistäminen 
@@ -15,6 +15,13 @@ Sovelluksen käynnistäminen onnistuu komentorivillä komennolla:
 teksti - mvn compile exec:java -Dexec.mainClass=com.mycompany.kirjanpito.mainClass
 
 graafinen - mvn compile exec:java -Dexec.mainClass=com.mycompany.kirjanpito.graphicMain
+
+
+### Testaus 
+Testikattavuus raportin saa luotua komentorivillä komennolla: mvn test jacoco:report
+
+Sen saa näkyviin komennolla: chromium-browser target/site/jacoco/index.html
+
 
 ### Dokumentaatio
 [Vaativuusmäärittely](https://github.com/karhuherra/ot-harjoitustyo/blob/master/dokumentaatio/vaativuusm%C3%A4%C3%A4rittely.md)

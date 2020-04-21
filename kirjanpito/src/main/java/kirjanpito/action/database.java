@@ -11,6 +11,7 @@ package kirjanpito.action;
  */
 import java.sql.*;
 import java.util.*;
+import kirjanpito.action.receipt;
 
 public class database {
     
@@ -42,54 +43,74 @@ public class database {
         }
     }
     
-    public void listAllReceipts() throws SQLException{
+    
+    public ArrayList<receipt> listAll() throws SQLException{
         try{
             PreparedStatement statement = db.prepareStatement("SELECT total,category FROM receipts");        
             ResultSet result = statement.executeQuery();
-            System.out.println("Kuitit:");
-            System.out.println("");
+            ArrayList<receipt> ret = new ArrayList<>();
             while(result.next()){
-                System.out.println(result.getDouble("total") + " " + result.getString("category"));
+                receipt rec = new receipt(result.getDouble("total"),result.getString("category"));
+                ret.add(rec);
             }
+            return ret;
             
         }catch (SQLException e){
             System.out.println("Ei toimi, kokeile uudestaan");
+            return new ArrayList<receipt>();
         }
     }
     
-    public ArrayList<Double> listAllReceiptsGraphic() throws SQLException{
+    
+    public ArrayList<receipt> listAllReceiptsFrom(String category) throws SQLException{
         try{
-            PreparedStatement statement = db.prepareStatement("SELECT total FROM receipts");        
+            PreparedStatement statement = db.prepareStatement("SELECT total,category FROM receipts WHERE category=?");
+            statement.setString(1,category);
             ResultSet result = statement.executeQuery();
-            ArrayList<Double> list = new ArrayList<>();
+            ArrayList<receipt> list = new ArrayList();
             while(result.next()){
-                list.add(result.getDouble("total"));
+                receipt rec = new receipt(result.getDouble("total"),result.getString("category"));
+                list.add(rec);
             }
             return list;
             
         }catch (SQLException e){
             System.out.println("Ei toimi, kokeile uudestaan");
+            return new ArrayList<>();
         }
-        ArrayList<Double> list = new ArrayList<>();
-        return list;
     }
     
-    public void listAllReceiptsFrom(String category) throws SQLException{
+    
+    public double listAllReceiptsFromSum(String category) throws SQLException{
         try{
-            PreparedStatement statement = db.prepareStatement("SELECT total,category FROM receipts WHERE category=?");
+            PreparedStatement statement = db.prepareStatement("SELECT SUM(total) FROM receipts WHERE category=?");
             statement.setString(1,category);
             ResultSet result = statement.executeQuery();
-            System.out.println("Kuitit:");
-            System.out.println("");
+            double ret = 0;
             while(result.next()){
-                System.out.println(result.getDouble("total") + " " + result.getString("category"));
+                ret = result.getDouble("SUM(total)");
             }
+            return ret;
             
         }catch (SQLException e){
             System.out.println("Ei toimi, kokeile uudestaan");
+            return 0;
         }
     }
     
-    
-    
+    public double listAllReceiptsSum() throws SQLException{
+        try{
+            PreparedStatement statement = db.prepareStatement("SELECT SUM(total) FROM receipts");
+            ResultSet result = statement.executeQuery();
+            double ret = 0;
+            while(result.next()){
+                ret = result.getDouble("SUM(total)");
+            }
+            return ret;
+            
+        }catch (SQLException e){
+            System.out.println("Ei toimi, kokeile uudestaan");
+            return 0;
+        }
+    }
 }

@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package com.mycompany.kirjanpito;
-import operatingsystem.graphicOperatingSystem;
-import kirjanpito.action.database;
+import ui.graphicOperatingSystem;
+import kirjanpito.dao.database;
 /**
  *
  * @author kaikarhu

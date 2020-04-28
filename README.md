@@ -8,6 +8,8 @@ Tässä sovelluksessa tarkoituksena on, että käyttäjä voi tallentaa omia kui
 ### Harjoitustyö tällä hetkellä
 Tekstikäyttöjärjestelmässä on paljon enemmän toimintoja kuin graafisessa. Testien toteuttaminen onnistuu nyt hiukan.
 
+### Suoritettavan jarin generointi
+Komento mvn package generoi tiedoston kirjanpito-1.0-SNAPSHOT.jar  hakemistoon target.
 
 ### Käynnistäminen 
 Sovelluksen käynnistäminen onnistuu komentorivillä komennolla:

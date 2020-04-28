@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package operatingsystem;
+package ui;
 
 import com.sun.javafx.scene.control.DoubleField;
 import javafx.application.Application;
@@ -14,11 +14,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import kirjanpito.action.database;
+import kirjanpito.dao.database;
 import java.sql.*;
 import java.util.*;
 import javafx.scene.control.*;
-import kirjanpito.action.receipt;
+import kirjanpito.dao.receipt;
 /**
  *
  * @author kaikarhu

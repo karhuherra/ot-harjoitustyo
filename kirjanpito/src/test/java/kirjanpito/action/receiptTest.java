@@ -5,6 +5,7 @@
  */
 package kirjanpito.action;
 
+import kirjanpito.dao.receipt;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

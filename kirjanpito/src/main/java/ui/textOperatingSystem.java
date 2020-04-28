@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package operatingsystem;
-import kirjanpito.action.database;
+package ui;
+import kirjanpito.dao.database;
 import java.util.*;
 import java.sql.*;
-import kirjanpito.action.receipt;
+import kirjanpito.dao.receipt;
 /**
  *
  * @author kaikarhu
@@ -18,9 +18,9 @@ public class textOperatingSystem {
     private Map<String, String> staments;
     private database db;
     
-    public textOperatingSystem(Scanner s) throws SQLException{
+    public textOperatingSystem(Scanner s, String st) throws SQLException{
         this.s = s;
-        this.db = new database("jdbc:sqlite:database.db");
+        this.db = new database(st);
         this.staments = new TreeMap<>();
         
         this.staments.put("666", "666 lopeta");
@@ -99,6 +99,10 @@ public class textOperatingSystem {
         for(String row : staments.values()){
             System.out.println(row);
         }
+    }
+    
+    public void drop() throws SQLException{
+        db.clean();
     }
     
 }

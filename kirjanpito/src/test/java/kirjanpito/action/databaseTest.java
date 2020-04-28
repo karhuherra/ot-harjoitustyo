@@ -5,6 +5,7 @@
  */
 package kirjanpito.action;
 
+import kirjanpito.dao.database;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -14,7 +15,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import java.sql.*;
 import java.util.*;
-import kirjanpito.action.receipt;
+import kirjanpito.dao.receipt;
 
 /**
  *

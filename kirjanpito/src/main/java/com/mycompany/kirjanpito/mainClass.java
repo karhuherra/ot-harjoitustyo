@@ -6,8 +6,8 @@
 package com.mycompany.kirjanpito;
 
 import java.util.Scanner;
-import operatingsystem.textOperatingSystem;
-import kirjanpito.action.database;
+import ui.textOperatingSystem;
+import kirjanpito.dao.database;
 import java.sql.*;
 
 /**
@@ -22,7 +22,7 @@ public class mainClass {
     public static void main(String[] args) throws SQLException {
         // TODO code application logic here
         Scanner s = new Scanner(System.in);
-        textOperatingSystem top = new textOperatingSystem(s);
+        textOperatingSystem top = new textOperatingSystem(s,"jdbc:sqlite:database.db");
         top.start();
     }
     

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kirjanpito.action;
+package kirjanpito.dao;
 
 /**
  *
@@ -11,7 +11,7 @@ package kirjanpito.action;
  */
 import java.sql.*;
 import java.util.*;
-import kirjanpito.action.receipt;
+import kirjanpito.dao.receipt;
 
 public class database {
     

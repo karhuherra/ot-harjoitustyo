@@ -1,13 +1,12 @@
 # Ohjelmistotekniikka
 
-### Kirjanpito sovellus
+### Kirjanpitosovellus
 Sovellus on loutu tarpeeseen. Allekirjoittaneella tulee, joka vuosi perheen vanhemman valtiomiehen kuitit läpikäytäväksi verotusta varten. Sovelluksella on siis tarkoitus helpottaa tätä kuittien kirjaamisis 
 ja laskemisprosessia. Sovellusta voi käyttää vain komentorivillä. 
 
-### Käynnistäminen 
-Sovelluksen käynnistäminen onnistuu komentorivillä komennolla:
+### Edellytykset
 
-mvn compile exec:java -Dexec.mainClass=com.mycompany.kirjanpito.mainClass
+Sovellus olettaa, että tietokoneella on käytössä Java 8.
 
 ### Dokumentaatio
 [Käyttöohjeet]()

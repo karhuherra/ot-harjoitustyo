@@ -18,20 +18,31 @@ public class textOperatingSystem {
     private Map<String, String> staments;
     private database db;
     
+    
+    /**
+     * Creates the ui
+     * 
+     * @param s Scanner fo ui
+     * @param st Adress for database
+     * @throws SQLException 
+     */
     public textOperatingSystem(Scanner s, String st) throws SQLException{
         this.s = s;
         this.db = new database(st);
         this.staments = new TreeMap<>();
         
         this.staments.put("666", "666 lopeta");
-        this.staments.put("999", "999 drop tables");
         this.staments.put("1", "1 lisää kuitti");
         this.staments.put("2", "2 näytä kaikki kuiti");
         this.staments.put("3", "3 näytä kaikki kuitit kategoriasta");
         this.staments.put("4", "4 summa kaikista kuiteista");
         this.staments.put("5", "5 summa kuiteista tietyssä kategoriassa");
     }
-    
+    /**
+     * Starts the application and then it can be used
+     * 
+     * @throws SQLException 
+     */
     public void start() throws SQLException{
         System.out.println("Kirjanpito");
         System.out.println("----------");
@@ -52,10 +63,15 @@ public class textOperatingSystem {
             
             if(statement.equals("1")){
                 System.out.println("Anna kuitin summa:");
-                double total = Double.valueOf(s.nextLine());
-                System.out.println("Anna kuitin kategoria:");
-                String category = s.nextLine();
-                db.addReceipt(total, category);
+                if(s.hasNextDouble() || s.hasNextInt()){
+                    double total = Double.valueOf(s.nextLine());
+                    System.out.println("Anna kuitin kategoria:");
+                    String category = s.nextLine();
+                    db.addReceipt(total, category);
+                }else{
+                    System.out.println("Summa ei ollut numero");
+                    continue;
+                }
             }
             
             if(statement.equals("2")){
@@ -94,13 +110,21 @@ public class textOperatingSystem {
         }
     }
     
-    
+    /**
+     * Prints the instructions
+     */
     public void printInstruction(){
         for(String row : staments.values()){
             System.out.println(row);
         }
     }
-    
+    /**
+     * drop all the tables
+     * <p>
+     * this method is for the tests
+     * </p>
+     * @throws SQLException 
+     */
     public void drop() throws SQLException{
         db.clean();
     }

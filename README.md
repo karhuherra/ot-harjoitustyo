@@ -9,11 +9,13 @@ ja laskemisprosessia. Sovellusta voi käyttää vain komentorivillä.
 Sovellus olettaa, että tietokoneella on käytössä Java 8.
 
 ### Dokumentaatio
-[Käyttöohjeet]()
+[Käyttöohjeet](https://github.com/karhuherra/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohjeet.md)
 
 [Vaativuusmäärittely](https://github.com/karhuherra/ot-harjoitustyo/blob/master/dokumentaatio/vaativuusm%C3%A4%C3%A4rittely.md)
 
 [Arkkitehtuurikuvaus]()
+
+[Testausdokumentti](https://github.com/karhuherra/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
 
 [Työaikakirjanpito](https://github.com/karhuherra/ot-harjoitustyo/blob/master/dokumentaatio/ty%C3%B6aikakirjanpito.md)
 

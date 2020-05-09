@@ -1,5 +1,5 @@
 # Työaikakirjanpito
-yhteensä: 35h
+yhteensä: 47h
 ### Viikko 2, ensimmäinen viikko harjoitustyön parissa
 
 Vaativuusmäärittelyn tekeminen noin 1 h.
@@ -19,3 +19,7 @@ Nyt tuntuu, että alkaa hieman ymmärtämään tätä 11h.
 ### Viikko 6, viides viikko harjoitustyön parissa
 
 Hommat kusi alleen, ensi viikolla riittää paljon hommia 5h.
+
+### Viimeistely.
+
+12 h.

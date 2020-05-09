@@ -16,6 +16,7 @@ veroilmoitusta tehdessä.
 ### Jatkokehitys ideoita
 Kun perusversio on valmiina sitä voidaan täydentää mahdollisesti seuraavin ideoin.
 
+* Käyttäjien luominen sovellukseen
 * Kuitin kategorian vaihtaminen toiseksi.
 * Tulojen ylläpito
 

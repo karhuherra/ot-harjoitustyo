@@ -13,7 +13,7 @@ Sovellus olettaa, että tietokoneella on käytössä Java 8.
 
 [Vaativuusmäärittely](https://github.com/karhuherra/ot-harjoitustyo/blob/master/dokumentaatio/vaativuusm%C3%A4%C3%A4rittely.md)
 
-[Arkkitehtuurikuvaus]()
+[Arkkitehtuurikuvaus](https://github.com/karhuherra/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuurikuvaus.md)
 
 [Testausdokumentti](https://github.com/karhuherra/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
 

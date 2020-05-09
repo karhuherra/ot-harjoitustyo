@@ -32,6 +32,8 @@ String-muodossa.
 
 Seuraavaksi kuvataan sovelluksen toiminnallisuuksia sekvenssikaavioina.
 
+
+
 #### Kuitin lisääminen 
 
 Kun sovelluksesta valitaan toiminto 1, on toiminta seuraavanlainen.
@@ -40,6 +42,8 @@ Kun sovelluksesta valitaan toiminto 1, on toiminta seuraavanlainen.
 
 Käyttäjärjestelmä kysyy tämän jälkeen käyttäjältä summan ja kategorian. Sitten se kutsuu database-luokan metodia addReceipt() parametreilla, jotka se on juuri saannut. Tämän jälkeen database luokassa metodi
 lisää tiedot sql-kielellä tietokantaan ja tulostaa käyttäjälle tiedon, että kuitti on lisätty.
+
+
 
 #### Kaikkien kuittien tulostaminen
 
@@ -50,6 +54,8 @@ Kun sovelluksessa valitaan toiminto 2, on toiminta seuraavanlainen.
 Käyttöjärjestelmä kutsuu database luokan metodia listAll(), joka sitten hakee tietokannasta kaikki summa-kategoria parit. Tämän jälkeen se muuttaa summa-kategoria parit kuiteiksi, jotka se lisää listalle, jonka se 
 palauttaa käyttöjärjestelmälle. Käyttöjärjestelmä sitten tulostaa käyttäjälle kaikki kuitit.
 
+
+
 #### Kaikkien kuittien tulostaminen kategoriasta
 
 Kun sovelluksessa valitaan toiminto 3, on toiminta seuraavanlainen.
@@ -59,6 +65,8 @@ Kun sovelluksessa valitaan toiminto 3, on toiminta seuraavanlainen.
 Käyttöjärjestelmä selvittää käyttäjältä kategorian jonka jälkeen käyttöjärjestelmä kutsuu database luokan metodia listAllFrom(String catergory),käyttäjän antamalla parametrilla, joka sitten hakee 
 tietokannasta kaikki kyseisen kategorian summa-kategoria parit. Tämän jälkeen se muuttaa summa-kategoria parit kuiteiksi, jotka se lisää listalle, jonka se 
 palauttaa käyttöjärjestelmälle. Käyttöjärjestelmä sitten tulostaa käyttäjälle kaikki kuitit.
+
+
 
 #### Kaikkien kuittien summan tulostaminen
 
